@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Server.Services
 {
-    public class RecordService
+    public class RecordService : IRecordService
     {
         public void GetRecords()
         {
@@ -14,7 +15,7 @@ namespace Server.Services
 
             while (currentRecord < totalRecords)
             {
-
+                Thread.Sleep(1000);
             }
         }
     }
